@@ -33,7 +33,7 @@ constants:
   diffusion: "models.GaussianDiffusion"
   share_inv: True
   history_horizon: 0
-  n_diffusion_steps: 200
+  n_diffusion_steps: 100
   action_weight: 10
   loss_weights: null
   loss_discount: 1
@@ -53,7 +53,7 @@ constants:
   # dataset
   loader: "datasets.SequenceDataset"
   normalizer: "CDFNormalizer"
-  max_n_episodes: 200000
+  max_n_episodes: 100000
   preprocess_fns: []
   use_padding: True
   discount: 0.99
@@ -61,15 +61,15 @@ constants:
   termination_penalty: 0.0
 
   # training
-  n_steps_per_epoch: 500
-  n_train_steps: 2000
+  n_steps_per_epoch: 50
+  n_train_steps: 200
   batch_size: 8
-  learning_rate: 0.004
+  learning_rate: 0.04
   gradient_accumulate_every: 1
   ema_decay: 0.995
-  log_freq: 10
-  save_freq: 500
-  sample_freq: 100
+  log_freq: 1
+  save_freq: 50
+  sample_freq: 10
   n_saves: 1
   save_parallel: False
   n_reference: 3
@@ -78,7 +78,7 @@ constants:
   # eval
   evaluator: "utils.MADEvaluator"
   num_eval: 1
-  eval_freq: 1000
+  eval_freq: 100
 
   # load checkpoint
   continue_training: True
