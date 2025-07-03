@@ -11,7 +11,7 @@ variables:
   horizon: [24]
 
   returns_scale: [700]
-  dataset: ["simple_spread-medium"]
+  dataset: ["simple_spread-random"]
   condition_guidance_w: [1.2]
 
 constants:
@@ -53,7 +53,7 @@ constants:
   # dataset
   loader: "datasets.SequenceDataset"
   normalizer: "CDFNormalizer"
-  max_n_episodes: 100000
+  max_n_episodes: 200000
   preprocess_fns: []
   use_padding: True
   discount: 0.99
