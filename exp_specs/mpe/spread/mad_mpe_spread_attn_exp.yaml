@@ -18,7 +18,7 @@ constants:
   # misc
   seed: 100
   env_type: "mpe"
-  n_agents: 3
+  n_agents: 2
   use_action: True
   discrete_action: False
   residual_attn: True
@@ -37,12 +37,12 @@ constants:
   action_weight: 10
   loss_weights: null
   loss_discount: 1
-  dim_mults: [1, 2, 4]
+  dim_mults: [1, 4, 8]
   returns_condition: True
   predict_epsilon: True
   calc_energy: False
-  dim: 64
-  hidden_dim: 128
+  dim: 128
+  hidden_dim: 256
   condition_dropout: 0.25
   condition_guidance_w: 1.2
   train_only_inv: False
@@ -63,7 +63,7 @@ constants:
   # training
   n_steps_per_epoch: 50
   n_train_steps: 200
-  batch_size: 8
+  batch_size: 2
   learning_rate: 0.04
   gradient_accumulate_every: 1
   ema_decay: 0.995
